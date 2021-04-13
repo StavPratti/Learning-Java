@@ -1,57 +1,52 @@
+public class Student {
 
-public class Student implements Person {
 
-	private int am;
-	private String firstName;
-	private String lastName;
+	private String name;	
 	private int age;
+	private int year;
+	private double mo;
 	
-	public Student(int am, String firstName, String lastName, int age) {
-		this.am=am;
-		this.firstName=firstName;
-		this.lastName=lastName;
-		this.age=age;
+	public Student(String name, int age, int year, double mo) {
+		this.name = name;
+		this.age = age;
+		this.year = year;
+		this.mo = mo;
+	}
+	public Student(){
+		name=null;
+		age=0;
+		year=0;
+		mo=0.0;
 	}
 
-	public int getAm() {
-		return am;
+	public String getName() {
+		return name;
 	}
-
-	public void setAm(int am) {
-		this.am = am;
+	public void setName(String name) {
+		this.name = name;
 	}
-
-	public String getFirstName() {
-		return firstName;
-	}
-
-	public void setFirstName(String firstName) {
-		this.firstName = firstName;
-	}
-
-	public String getLastName() {
-		return lastName;
-	}
-
-	public void setLastName(String lastName) {
-		this.lastName = lastName;
-	}
-	
-	public int getAge() { //interface completed
+	public int getAge() {
 		return age;
 	}
-
 	public void setAge(int age) {
 		this.age = age;
 	}
-	
-	public String getName() {
-		return firstName + " " + lastName; //like toString
+	public int getYear() {
+		return year;
 	}
-
-	@Override
+	public void setYear(int year) {
+		this.year = year;
+	}
+	public double getMo() {
+		return mo;
+	}
+	public void setMo(double mo) {
+		this.mo = mo;
+	}
 	public String toString() {
-		return "Student [am=" + am + ", firstName=" + firstName + ", lastName=" + lastName + "]";
+		return "Student [name=" + name + ", age=" + age + ", year=" + year + ", mo=" + mo + "]";
 	}
-	
+	 public void compute(double grade) {
+	    mo=(mo+grade)/2;
+	  }
 }
